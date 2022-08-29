@@ -145,6 +145,22 @@ public class ProductDao {
         return totalPrice;
     }
 
+
+
+
+    public boolean deleteProducts(int id) {
+        try {
+            String Query = "DELETE from products WHERE id = ?";
+            statement = DatabaseConnection.getConnection().prepareStatement(Query);
+            statement.setInt(1,id);
+
+            int resultSet1 = statement.executeUpdate();
+            if (resultSet1 > 0) return true;
+        } catch (Exception e) {
+            e.getMessage();
+        }
+        return false;
+    }
 }
 
 

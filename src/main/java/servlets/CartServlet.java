@@ -37,8 +37,8 @@ public class CartServlet extends HttpServlet {
                 for (Cart list : cart_list) {
                     if (list.getProductId() == id) {
                         exist = true;
-                       // out.println("<h3 style='color: crimson; text-align: center'>Item already exists in cart<a href='cart.jsp'>  Go to cart page</a></h3>");
-                   // }
+                        out.println("<h3 style='color: crimson; text-align: center'>Item already exists in cart<a href='cart.jsp'>  Go to cart page</a></h3>");
+                    }
                 }
                 if (!exist) {
                     cartList.add(cart);
@@ -49,7 +49,7 @@ public class CartServlet extends HttpServlet {
         }
     }
 }
-    }
+
 //
 //    @Override
 //    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
